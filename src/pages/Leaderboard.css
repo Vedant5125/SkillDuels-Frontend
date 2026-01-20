@@ -1,0 +1,149 @@
+.leaderboard-page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 0;
+}
+
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.leaderboard-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.leaderboard-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+}
+
+.leaderboard-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table {
+  width: 100%;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px 100px 140px;
+  padding: 16px;
+  border-bottom: 2px solid var(--border);
+  font-weight: 700;
+  color: var(--gray);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px 100px 140px;
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.table-row:hover {
+  background: var(--light);
+}
+
+.col-rank {
+  text-align: center;
+  font-size: 32px;
+}
+
+.rank-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+.col-player {
+  display: flex;
+  align-items: center;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.player-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.player-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.col-stats {
+  text-align: center;
+}
+
+.xp-badge {
+  background: #dbeafe;
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.wins-badge {
+  background: #d1fae5;
+  color: var(--secondary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.rank-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.no-data {
+  text-align: center;
+  padding: 48px;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 60px 1fr 80px;
+  }
+
+  .col-stats:nth-child(4),
+  .col-stats:nth-child(5) {
+    display: none;
+  }
+
+  .leaderboard-card {
+    padding: 16px;
+  }
+}
