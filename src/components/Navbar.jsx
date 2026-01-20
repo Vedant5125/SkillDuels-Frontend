@@ -32,7 +32,7 @@ const Navbar = () => {
                 <Link to="/profile" className="nav-link">
                   Profile
                 </Link>
-                {user.role === "admin" && (
+                {user.role === "host" && (
                   <Link to="/admin" className="nav-link">
                     Admin
                   </Link>
